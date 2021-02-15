@@ -35,34 +35,42 @@ console.log(element);
 
 ## La fonction GetElementsByClassName()
 
+
 ### Que fait la fonction ?
-...
+
+renvoi la liste des elements appartenant à une classe 
 
 ### Pourquoi l'utiliser ?
-...
+
+La fonction getElementsByClassName doit être utilisée si l'on veut utiliser une liste d'éléments du DOM en HTML grâce à Javascript.
 
 ### Exemple de code:
 ```javascript
-// CODE
+let liste_paragraphe = document.getElementsByClassName("paragraphe");
+
+console.log(liste_paragraphe[0]);
 ```
 
 ## La fonction querySelector() et querySelectorAll()
 
 ### Que fait la fonction ?
-...
+
+Retourne le premier élément que contient la classe ".maclasse":
 
 ### Pourquoi l'utiliser ?
-...
+
+rapide efficace
 
 ### Exemple de code:
 ```javascript
-// CODE
+let el = document.querySelector(".maclasse");
 ```
 
 ## La fonction addEventListener()
 
 ### Que fait la fonction ?
-...
+
+creer une fonction quand il y a un event ?  click -> event (lance une fonction quand il y a un event)
 
 ### Pourquoi l'utiliser ?
 ...
@@ -101,14 +109,26 @@ console.log(element);
 ## La fonction parseInt()
 
 ### Que fait la fonction ?
-...
+
+La fonction parseInt() analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.
 
 ### Pourquoi l'utiliser ?
-...
+
+pour changer un string en int 
 
 ### Exemple de code:
 ```javascript
-// CODE
+function roughScale(x, base) {
+  const parsed = parseInt(x, base);
+  if (isNaN(parsed)) { return 0; }
+  return parsed * 100;
+}
+
+console.log(roughScale(' 0xF', 16));
+// expected output: 1500
+
+console.log(roughScale('321', 2));
+// expected output: 0
 ```
 
 
@@ -116,9 +136,8 @@ console.log(element);
 
 ### Code:
 ```javascript
-element.addEventListener('event-name', function(event) {
-  console.log(event);
-});
+element.addEventListener('event-name', function(event)){
+console.log(event);}
 ```
 
 ### Qu'est-ce que cette variable ?
